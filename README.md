@@ -3,7 +3,7 @@
 A JS helper library to detect screen size by named breakpoints. Based off of the [sass-mq](https://www.npmjs.com/package/sass-mq) library.
 
 ## Quick start guide
-This documentation assumes you are familiar with and using the ES6 JavaScript syntax in your project. This code will not work in environments the do not support the ES6 syntax without transpiling into ES5.
+This documentation assumes you are familiar with and using the ES6 JavaScript syntax in your project.
 
 All breakpoint definitions use the mobile first approach. In this methodology, the pixel size for a breakpoint is the smallest width on the breakpoint. The largest width on the breakpoint is 1px less than the next breakpoint size.
 
@@ -28,6 +28,8 @@ const bp = {
 
 const mq = new MQ(bp);
 
+export default mq;
+
 // Give easy access to site breakpoints and the js-mq object with breakpoints already defined.
 export {mq, bp};
 ```
@@ -39,7 +41,7 @@ Now you can easily import the `mq` variable into any of your projects JavaScript
 ////////////////////
 
 // Import from file created in setup stage
-import {mq} from '../mq';
+import mq from '../mq';
 
 // Alternatively import both the mq variable and the website breakpoints
 // (Use one line or the other, do not use both import statements)
@@ -68,4 +70,8 @@ if (mq.from(1000)) {
 ## Methods
 * `mq.from()` - Returns true if screen size is greater than or equal to specified pixel value/breakpoint.
 * `mq.until()` - Returns true if screen size is less than specified pixel value/breakpoint.
-* `mq.on()` - Takes 2 arguments, Returns true if screen size is greater than or equal to first argument value/breakpoint AND screen size is less than second argument value/breakpoint. 
+* `mq.on()` - Takes 2 arguments, Returns true if screen size is greater than or equal to first argument value/breakpoint AND screen size is less than second argument value/breakpoint.
+
+## Changelog
+### 1.1.0
+* Refactored code to improve browser support (namely IE11). 
