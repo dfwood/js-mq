@@ -103,4 +103,4 @@ function MQ(breakpoints) {
     }
 }
 
-export {MQ};
+export default MQ;

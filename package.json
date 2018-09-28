@@ -2,6 +2,14 @@
   "name": "@dfwood/js-mq",
   "version": "1.0.0",
   "description": "A JS helper library to detect screen size by named breakpoints. Based off of the `sass-mq` library.",
+  "keywords": [
+    "breakpoints",
+    "js",
+    "JavaScript",
+    "media query",
+    "media queries",
+    "responsive"
+  ],
   "main": "index.js",
   "author": {
     "name": "David Wood",
